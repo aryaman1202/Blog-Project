@@ -17,20 +17,20 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/",function(req,res){
-    res.render("home", {starting_content: homeStartingContent,
+    res.render("Views/home", {starting_content: homeStartingContent,
     posts: posts});
 })
 
 app.get("/about",function(req,res){
-    res.render("about", {about_content: aboutContent});
+    res.render("Views/about", {about_content: aboutContent});
 })
 
 app.get("/contact",function(req,res){
-    res.render("contact", {contact_content: contactContent});
+    res.render("Views/contact", {contact_content: contactContent});
 })
 
 app.get("/compose",function(req,res){
-    res.render("compose");
+    res.render("Views/compose");
 })
 
 app.post("/compose", function(req,res){
